@@ -1,4 +1,4 @@
-import React, { useState,useRef, useEffect } from 'react'
+import React, { useState} from 'react'
 import { SiYoutube } from "react-icons/si";
 import { FiInstagram } from "react-icons/fi";
 import { IoLogoFacebook } from "react-icons/io5";
@@ -7,6 +7,8 @@ import { Link } from 'react-router-dom';
 import { navbarData } from '../components/navbar';
 import useWindowSize from '../hooks/useWindowSize';
 import { LiaBookReaderSolid } from "react-icons/lia";
+import Cardslider from '../components/Restaurantsec';
+
 function HomePage  () {
   const [toggle, setToggle] = useState(false);
   const [bottomOffset, setBottomOffset] = useState(0);
@@ -26,20 +28,10 @@ function HomePage  () {
     }
   }; 
 
-  const upperRef = useRef(null);
-  const lowerRef = useRef(null);
-  
-    useEffect(() => {
-      if (upperRef.current && lowerRef.current) {
-        const upperRect = upperRef.current.getBoundingClientRect();
-        setBottomOffset(upperRect.bottom);
-      }
-    }, []);
-
   return (
-        <div className="relative h-screen flex">
+        <div className="relative h-screen flex scroll-smooth">
           {/* The main container */}
-         <div className=' relative bg-custom-white w-full h-[88rem]'  ref={upperRef}>
+         <div className=' relative bg-custom-white w-full h-[88rem]'>
           {/* The navigation bar */}
           <nav className=' relative bg-custom-white'>
            <div className='ml-10 md:ml-20 mt-8'>
@@ -148,12 +140,16 @@ function HomePage  () {
             </div>
           </div>
           </div>
-          <div className='absolute bg-[#f3eff2] w-full h-[30rem] md:h-[60rem] md:top-10 top-20'
-          ref={lowerRef}
-          style={{ top: `${bottomOffset}px` }}>
-
+          {/* Restaurant Section */}
+          <div className='absolute bg-[#f3eff2] w-full h-[130rem] md:h-[158rem] md:mt-[88rem] mt-[150rem] mb-[10rem]'>
+            <h1 className='absolute text-5xl bold text-center font-calistoga mt-10 w-full'>Best in Class Restaurant</h1>
+            <h1 className='absolute text-base text-gray-400 text-center w-full font-merriweather md:px-56 md:mt-28 mt-36 px-4'>Indulge in culinary excellence where every dish is crafted to perfection.
+              Experience a dining journey that transcends expectations</h1>
+          <div className='absolute mt-30rem w-full h-[100rem] top-[10rem]'>
+          <Cardslider />
           </div>
-          </div> 
+          </div>
+          </div>      
         
       );
 }
