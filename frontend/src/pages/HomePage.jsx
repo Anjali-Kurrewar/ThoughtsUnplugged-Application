@@ -141,7 +141,7 @@ function HomePage  () {
           </div>
           </div>
           {/* Restaurant Section */}
-          <div className='absolute bg-[#f3eff2] w-full h-[130rem] md:h-[158rem] md:mt-[88rem] mt-[150rem] mb-[10rem]'>
+          <div className='absolute bg-[#f3eff2] w-full h-[130rem] md:h-[170rem] md:mt-[88rem] mt-[150rem] mb-[10rem]'>
             <h1 className='absolute text-5xl bold text-center font-calistoga mt-10 w-full'>Best in Class Restaurant</h1>
             <h1 className='absolute text-base text-gray-400 text-center w-full font-merriweather md:px-56 md:mt-28 mt-36 px-4'>Indulge in culinary excellence where every dish is crafted to perfection.
               Experience a dining journey that transcends expectations</h1>
@@ -149,8 +149,47 @@ function HomePage  () {
           <Cardslider />
           </div>
           </div>
-          </div>      
-        
+          <div className='absolute flex w-full bg-custom-blue h-[30rem] mt-[246rem] top-10 flex-col items-center'>
+             <h1 className='flex text-white text-6xl font-calistoga text-center w-full justify-center pt-10'>
+               Invite me to your restaurant.<br />
+               Get exposure of millions food lovers.
+             </h1>
+             <br />
+             <p className='text-gray-200 font-merriweather text-center  px-56'>
+               Discover the buzz that only a seasoned food critic can create. Let's make your culinary delights the talk of the town. Share your culinary delights with a passionate audience eager to discover new dining experiences
+             </p>
+             <div className='flex w-full justify-center'>
+               <button type="button" className='mt-8 border border-white text-custom-blue bg-white px-5 py-2 font-mono focus:outline-none font-bold hover:bg-custom-blue hover:text-white '>
+                 Let's Talk
+               </button>
+             </div>
+          </div>
+          <footer className="absolute bg-custom-white h-[20rem] w-full mt-[276rem]">
+  <div className="w-full max-w-screen-xl mx-auto p-4">
+    <div className="flex flex-col items-center">
+      <ul className="flex flex-wrap items-center justify-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+        <li>
+          <a href="#" className="hover:underline me-4 md:me-6">About</a>
+        </li>
+        <li>
+          <a href="#" className="hover:underline me-4 md:me-6">Privacy Policy</a>
+        </li>
+        <li>
+          <a href="#" className="hover:underline me-4 md:me-6">Licensing</a>
+        </li>
+        <li>
+          <a href="#" className="hover:underline">Contact</a>
+        </li>
+      </ul>
+      <hr className="w-full my-6 border-gray-200 dark:border-gray-700 lg:my-8" />
+      <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
+        © 2023 <a href="https://flowbite.com/" className="hover:underline">Flowbite™</a>. All Rights Reserved.
+      </span>
+    </div>
+  </div>
+</footer>
+
+          </div>
       );
 }
     
