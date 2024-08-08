@@ -69,36 +69,43 @@ const AboutUsPage = () => {
           })}
         </ul>
         {/* Intro */}
-        <div className='absolute top-[34rem] md:top-48 left-8 md:left-16 right-8 md:right-[44rem] h-[30rem]'>
-            <h5 className='font-calistoga text-3xl mt-8 md:text-6xl md:leading-[10rem]'>About Me</h5>
-            <p className='text-gray-600  text-justify '>I immerse myself in the world of culinary delights, offering insightful reviews and captivating content that inspire food enthusiasts. Through my journey, I share the art and stories behind each dish, connecting with a community that values flavor, creativity, and the joy of dining.</p>
-            <div className='w-[40rem] h-[24rem] mt-10 space-y-4'>
-              <div className='flex items-start'>
-                <FaPizzaSlice size={24} color="#be7c68" />
-                <div className='ml-4'>
-                  <h4 className='font-merriweather text-xl'>Food Critic</h4>
-                  <p className='text-gray-600 pr-10'>Offering expert reviews and insightful critiques on the latest dining experiences to guide food enthusiasts.</p>
-                </div>
+     <div className="absolute top-[34rem] md:top-48 left-8 md:left-16 right-8 md:right-[44rem] h-auto md:h-[30rem]">
+        <h5 className="font-calistoga text-3xl mt-8 md:text-6xl md:leading-[6rem]">About Me</h5>
+       <p className="text-gray-600 text-justify mt-4">
+         I immerse myself in the world of culinary delights, offering insightful reviews and captivating content that inspire food enthusiasts. Through my journey, I share the art and stories behind each dish, connecting with a community that values flavor, creativity, and the joy of dining.
+       </p>
+       <div className="mt-10 space-y-6 md:space-y-4">
+         <div className="flex items-start">
+           <FaPizzaSlice size={24} color="#be7c68" />
+           <div className="ml-4 md:ml-6">
+             <h4 className="font-merriweather text-xl md:text-2xl">Food Critic</h4>
+             <p className="text-gray-600 md:pr-10">
+               Offering expert reviews and insightful critiques on the latest dining experiences to guide food enthusiasts.
+              </p>
+            </div>
+            </div>
+            <div className="flex items-start">
+              <HiOutlineSpeakerphone size={24} color="#be7c68" />
+              <div className="ml-4 md:ml-6">
+                <h4 className="font-merriweather text-xl md:text-2xl">Food Influencer</h4>
+                <p className="text-gray-600 md:pr-10">
+                        Sharing trends and recommendations to inspire and engage a diverse audience through compelling content.
+                </p>
               </div>
-              <div className='flex items-start'>
-                <HiOutlineSpeakerphone size={24} color="#be7c68" />
-                <div className='ml-4'>
-                  <h4 className='font-merriweather text-xl'>Food Influencer</h4>
-                  <p className='text-gray-600 pr-10'>Sharing trends and recommendations to inspire and engage a diverse audience through compelling content.</p>
-                </div>
+            </div>
+            <div className="flex items-start">
+              <FaNewspaper size={24} color="#be7c68" />
+              <div className="ml-4 md:ml-6">
+                <h4 className="font-merriweather text-xl md:text-2xl">Food Blogger</h4>
+                <p className="text-gray-600 md:pr-10">
+                  Creating engaging content that shares the stories behind dishes and inspires.
+                </p>
               </div>
-              <div className='flex items-start'>
-                <FaNewspaper size={24} color="#be7c68" />
-                <div className='ml-4'>
-                  <h4 className='font-merriweather text-xl'>Food Blogger</h4>
-                  <p className='text-gray-600 pr-10'>Creating engaging content that shares the stories behind dishes and inspires.</p>
-                </div>
-              </div>
-           </div>
-
+            </div>
+          </div>
         </div>
         {/* Intro icons */}
-          <div className='absolute left-10 top-[64rem] w-[10rem]  md:w-[38rem] md:h-[12rem]  md:left-16 md:top-[52rem]'>
+          <div className='absolute left-10 top-[80rem] w-[10rem]  md:w-[38rem] md:h-[12rem]  md:left-16 md:top-[52rem]'>
           <div className='absolute left-0 inline-flex  '>
           <SiYoutube color="#be7c68" size={getIconSize()} />
           </div>
@@ -141,10 +148,10 @@ const AboutUsPage = () => {
             className="absolute p-12 top-20 md:top-40 md:left-1/2 md:w-5/12 md:h-[48rem] "
           />
           </div>
-          <div className=' w-full h-[30rem] mt-[70rem] absolute'>
+          <div className=' w-full h-[30rem] mt-[88rem] md:mt-[70rem] absolute'>
           <Footer1/>
           </div>
-          <div className='absolute h-[20rem] w-full mt-[100rem]'>
+          <div className='absolute h-[16rem] w-full mt-[119rem] md:mt-[100rem]'>
           <Footer2/>
           </div>
           </div>
