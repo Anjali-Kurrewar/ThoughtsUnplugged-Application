@@ -8,10 +8,10 @@ import { navbarData } from '../components/navbar';
 import useWindowSize from '../hooks/useWindowSize';
 import { LiaBookReaderSolid } from "react-icons/lia";
 import Cardslider from '../components/Restaurantsec';
-
+import Footer1 from '../components/Footer1';
+import Footer2 from '../components/Footer2';
 function HomePage  () {
   const [toggle, setToggle] = useState(false);
-  const [bottomOffset, setBottomOffset] = useState(0);
   const size = useWindowSize();
 
   const showNav = () => {
@@ -47,7 +47,7 @@ function HomePage  () {
         <ul
           className={`${
             toggle ? " flex" : " hidden"
-          } flex-col z-30 absolute md:absolute  md:ml-48 md:top-4 w-full first:mt-2 md:flex-row md:w-auto md:space-x-10 md:flex bg-white-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-50 border border-gray-100`}
+          } flex-col z-30 absolute md:absolute  md:ml-48 md:top-4 md:border-none w-full first:mt-2 md:flex-row md:w-auto md:space-x-10 md:flex bg-white-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-50 border border-gray-100`}
         >
           {navbarData.map((link, index) => {
             return (
@@ -145,50 +145,18 @@ function HomePage  () {
             <h1 className='absolute text-5xl bold text-center font-calistoga mt-10 w-full'>Best in Class Restaurant</h1>
             <h1 className='absolute text-base text-gray-400 text-center w-full font-merriweather md:px-56 md:mt-28 mt-36 px-4'>Indulge in culinary excellence where every dish is crafted to perfection.
               Experience a dining journey that transcends expectations</h1>
+              {/* Card section */}
           <div className='absolute mt-30rem w-full h-[100rem] top-[10rem]'>
           <Cardslider />
           </div>
           </div>
-          <div className='absolute flex w-full bg-custom-blue h-[30rem] mt-[246rem] top-10 flex-col items-center'>
-             <h1 className='flex text-white text-6xl font-calistoga text-center w-full justify-center pt-10'>
-               Invite me to your restaurant.<br />
-               Get exposure of millions food lovers.
-             </h1>
-             <br />
-             <p className='text-gray-200 font-merriweather text-center  px-56'>
-               Discover the buzz that only a seasoned food critic can create. Let's make your culinary delights the talk of the town. Share your culinary delights with a passionate audience eager to discover new dining experiences
-             </p>
-             <div className='flex w-full justify-center'>
-               <button type="button" className='mt-8 border border-white text-custom-blue bg-white px-5 py-2 font-mono focus:outline-none font-bold hover:bg-custom-blue hover:text-white '>
-                 Let's Talk
-               </button>
-             </div>
+          {/* The footer section */}
+          <div className='absolute mt-[246rem] h-[30rem] w-full top-10'>          
+          <Footer1 />  
           </div>
-          <footer className="absolute bg-custom-white h-[20rem] w-full mt-[276rem]">
-  <div className="w-full max-w-screen-xl mx-auto p-4">
-    <div className="flex flex-col items-center">
-      <ul className="flex flex-wrap items-center justify-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-        <li>
-          <a href="#" className="hover:underline me-4 md:me-6">About</a>
-        </li>
-        <li>
-          <a href="#" className="hover:underline me-4 md:me-6">Privacy Policy</a>
-        </li>
-        <li>
-          <a href="#" className="hover:underline me-4 md:me-6">Licensing</a>
-        </li>
-        <li>
-          <a href="#" className="hover:underline">Contact</a>
-        </li>
-      </ul>
-      <hr className="w-full my-6 border-gray-200 dark:border-gray-700 lg:my-8" />
-      <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
-        © 2023 <a href="https://flowbite.com/" className="hover:underline">Flowbite™</a>. All Rights Reserved.
-      </span>
-    </div>
-  </div>
-</footer>
-
+          <div className='absolute mt-[276rem] w-full h-[20rem]'>
+            <Footer2 />
+          </div>
           </div>
       );
 }
