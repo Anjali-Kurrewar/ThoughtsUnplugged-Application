@@ -151,7 +151,7 @@ function HomePage  () {
           </div>
           </div>
           {/* The footer section */}
-          <div className='absolute md:top-[246rem] h-[30rem] w-full top-[454rem]'>          
+          <div className='absolute md:top-[250rem] h-[30rem] w-full top-[454rem]'>          
           <Footer1 />  
           </div>
           <div className='absolute md:top-[276rem] w-full md:h-[20rem] top-[481rem] bottom-0'>

@@ -85,9 +85,9 @@ const ContactUsPage = () => {
         <div className='absolute w-[10rem] h-[10rem] md:w-[18rem] md:h-[18rem]  bg-gradient-to-r from-main-color1 to-main-color2 rounded-2xl left-1/2 top-[32rem] md:left-[52rem] md:top-[28rem] '></div>
         <div className='absolute w-[2rem] h-[2rem] md:w-[4rem] md:h-[4rem]  bg-gradient-to-r from-main-color1 to-main-color2 rounded-md left-[2rem] top-[24rem] md:left-[22rem] md:top-[34rem] '></div>
         <div className='absolute w-[4rem] h-[4rem] md:w-[8rem] md:h-[8rem]  bg-gradient-to-r from-main-color1 to-main-color2   rounded-2xl left-3/4 top-[2rem] md:left-[60rem] md:top-[4rem] '></div>
-        <div className='absolute md:mx-[24rem] md:mt-[10rem] md:w-[40rem] md:h-[34rem]  mt-20 w-full h-auto bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100'>
+        <div className='absolute md:mx-[24rem] md:mt-[10rem] md:w-[40rem] md:h-[34rem] pl-[2.5rem]  mt-20 w-full h-[35rem] bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100'>
         <form onSubmit={handleSubmit}>
-          <div className='absolute'>
+          <div className='absolute '>
           <div >
           <h1 className=' text-gray-600 text-md font-merriweather pl-[3rem] pt-6 mb-2'>Full Name:</h1>
             <input 
@@ -140,7 +140,7 @@ const ContactUsPage = () => {
     <div className='absolute w-full h-[44rem] md:h-[30rem] mt-[4rem]'>
           <Footer1/>
     </div>
-    <div className='absolute w-full h-[15rem] mt-[35rem] md:mt-[30rem]'>
+    <div className='absolute w-full h-[15rem] mt-[31rem] md:mt-[30rem]'>
           <Footer2/>
     </div>
     </div>
