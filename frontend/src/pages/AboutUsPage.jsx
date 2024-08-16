@@ -148,10 +148,10 @@ const AboutUsPage = () => {
             className="absolute p-12 top-20 md:top-40 md:left-1/2 md:w-5/12 md:h-[48rem] "
           />
           </div>
-          <div className=' w-full h-[30rem] mt-[88rem] md:mt-[70rem] absolute'>
+          <div className=' w-full h-[30rem] mt-[100rem] md:mt-[70rem] absolute bg-black'>
           <Footer1/>
           </div>
-          <div className='absolute h-[16rem] w-full mt-[119rem] md:mt-[100rem]'>
+          <div className='absolute h-[16rem] w-full mt-[150rem] md:mt-[100rem]'>
           <Footer2/>
           </div>
           </div>

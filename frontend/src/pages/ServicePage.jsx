@@ -66,7 +66,7 @@ const ServicePage = () => {
            Each review is crafted to help food enthusiasts discover new places to savor and enjoy. 
          </p>
          <div className='relative md:absolute top-[2rem] md:top-0 md:right-0 right-0 md:h-full w-full h-[20rem] md:pr-[44rem]'>
-           <img src='./service2.avif' alt='service1' className='absolute inset-0 object-cover rounded-b-3xl md:rounded-s-3xl w-auto h-full md:pr-[48rem]'/>
+           <img src='./service2.avif' alt='service2' className='absolute inset-0 object-cover rounded-b-3xl md:rounded-s-3xl w-auto h-full md:pr-[48rem]'/>
           </div>
         </div>
         {/* Service 3 */}
@@ -80,7 +80,7 @@ const ServicePage = () => {
               , my expertise in food photography will bring your dishes to life and engage your audience.
          </p>
          <div className='relative md:absolute top-[2rem] md:top-0 right-0 md:right-0 md:h-full w-full h-[20rem] md:pl-[44rem]'>
-           <img src='./service3.jpg' alt='service1' className='absolute inset-0 object-cover rounded-b-3xl md:rounded-e-3xl w-auto h-full md:pl-[48rem]'/>
+           <img src='./service3.jpg' alt='service3' className='absolute inset-0 object-cover rounded-b-3xl md:rounded-e-3xl w-auto h-full md:pl-[48rem]'/>
          </div>
         </div>
        {/* Service 4 */}
@@ -94,7 +94,7 @@ const ServicePage = () => {
             expertise to guide you through the plethora of options and find the products that enhance your cooking experience.
           </p>
           <div className='relative md:absolute top-[2rem] md:top-0 md:right-0 right-0 md:h-full w-full h-[20rem] md:w-[30rem] md:pr-[74.5rem]'>
-            <img src='./service4.jpg' alt='service4' className='absolute inset-0 object-cover sm:rounded-b-3xl md:rounded-s-3xl w-full md:w-[26rem] h-full '/>
+            <img src='./service4.jpg' alt='service4' className='absolute inset-0 object-cover rounded-b-3xl md:rounded-s-3xl w-full md:w-[26rem] h-full '/>
           </div>
         </div>
             {/* Footer */}

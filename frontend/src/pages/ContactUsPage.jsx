@@ -7,9 +7,44 @@ import Footer2 from '../components/Footer2';
 
 const ContactUsPage = () => {
   const [toggle, setToggle] = useState(false);
+  const [formData, setFormData] = useState({
+    username: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+
   const showNav = () => {
     setToggle(!toggle);
   };
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('http://localhost:3000/api/form/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        console.log('Message sent successfully');
+        // You can add success handling here
+      } else {
+        console.log('Failed to send message');
+        // You can add error handling here
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+
   return (
     <div className='relative bg-custom-white w-full scroll-smooth pt-8 pb-20 h-full '>
       <nav className=' relative bg-custom-white '>
@@ -51,25 +86,55 @@ const ContactUsPage = () => {
         <div className='absolute w-[2rem] h-[2rem] md:w-[4rem] md:h-[4rem]  bg-gradient-to-r from-main-color1 to-main-color2 rounded-md left-[2rem] top-[24rem] md:left-[22rem] md:top-[34rem] '></div>
         <div className='absolute w-[4rem] h-[4rem] md:w-[8rem] md:h-[8rem]  bg-gradient-to-r from-main-color1 to-main-color2   rounded-2xl left-3/4 top-[2rem] md:left-[60rem] md:top-[4rem] '></div>
         <div className='absolute md:mx-[24rem] md:mt-[10rem] md:w-[40rem] md:h-[34rem]  mt-20 w-full h-auto bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100'>
+        <form onSubmit={handleSubmit}>
           <div className='absolute'>
           <div >
           <h1 className=' text-gray-600 text-md font-merriweather pl-[3rem] pt-6 mb-2'>Full Name:</h1>
-            <input type='text' className=' border border-gray-300 w-full md:w-[34rem]  text-gray-900 bg-gray-50 rounded-lg p-2.5 focus:ring-black focus:border-black  ml-[3rem]' placeholder="John" required/>  
+            <input 
+                type='text'
+                name='username'
+                value={formData.username}
+                onChange={handleChange} 
+                className=' border border-gray-300 w-full md:w-[34rem]  text-gray-900 bg-gray-50 rounded-lg p-2.5 focus:ring-black focus:border-black  ml-[3rem]' 
+                placeholder="John" 
+                required/>  
           </div>
           <div>
           <h1 className=' text-gray-600 text-md font-merriweather pl-[3rem] pt-4 mb-2'>Email:</h1>
-            <input type='text' className=' border border-gray-300 w-full md:w-[34rem]  text-gray-900 rounded-lg p-2.5 bg-gray-50 focus:ring-black focus:border-black  ml-[3rem]' placeholder="Johndoe@gmail.com" required/>  
+            <input 
+              type='text'
+              name='email'
+              value={formData.email}
+              onChange={handleChange}
+              className=' border border-gray-300 w-full md:w-[34rem]  text-gray-900 rounded-lg p-2.5 bg-gray-50 focus:ring-black focus:border-black  ml-[3rem]' 
+              placeholder="Johndoe@gmail.com" 
+              required/>  
           </div>
           <div>
           <h1 className='text-gray-600 text-md font-merriweather pl-[3rem] pt-4 mb-2'>Subject:</h1>
-            <input type='text' className='border border-gray-300 w-full md:w-[34rem]  text-gray-900 rounded-lg p-2.5 bg-gray-50 focus:ring-black focus:border-black  ml-[3rem]' placeholder="Write you subject here..." required/>  
+            <input 
+            type='text'
+            name='subject'
+            value={formData.subject}
+            onChange={handleChange} 
+            className='border border-gray-300 w-full md:w-[34rem]  text-gray-900 rounded-lg p-2.5 bg-gray-50 focus:ring-black focus:border-black  ml-[3rem]' 
+            placeholder="Write you subject here..." 
+            required/>  
           </div>
           <div>
-            <label for="message" class="block mb-2 text-md font-merriweather text-gray-600 pl-[3rem] pt-4">Your message:</label>
-            <textarea id="message" rows="4" class="block p-2.5 w-full md:w-[34rem]  ml-[3rem] text-md text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-black focus:border-black" placeholder="Write your thoughts here..."></textarea>
+            <label htmlFor="message" className="block mb-2 text-md font-merriweather text-gray-600 pl-[3rem] pt-4">Your message:</label>
+            <textarea 
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange} 
+            rows="4" 
+            className="block p-2.5 w-full md:w-[34rem]  ml-[3rem] text-md text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-black focus:border-black" 
+            placeholder="Write your thoughts here..."></textarea>
           </div> 
           <button type="button" className=" mt-4 ml-[3rem] text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-md px-5 py-2.5 me-2 mb-2">Send</button>
           </div>
+          </form>
       </div>
     </div>
     <div className='absolute w-full h-[44rem] md:h-[30rem] mt-[4rem]'>

@@ -116,7 +116,7 @@ function HomePage  () {
             className="absolute p-12 top-20 md:top-40 md:left-1/2 md:w-5/12 md:min-h-[554px] "
           />
           {/* Review Section */}
-          <div className='relative flex-col md:flex-row w-full h-[36rem]  mt-[70rem] md:mt-[26rem] md:top-[24rem] flex justify-evenly items-center'>
+          <div className='relative flex-col md:flex-row w-full h-[36rem] mt-[70rem] md:mt-[26rem] md:top-[24rem] flex justify-evenly items-center'>
             <div className='flex flex-col items-center w-80 h-96 '>
               <img src='/review1.jpg' alt='Review1' className='w-80 h-56'/>
               <h1 className='font-calistoga text-2xl'>Heavenly Strawberry-Topped Waffles</h1>
@@ -141,20 +141,20 @@ function HomePage  () {
           </div>
           </div>
           {/* Restaurant Section */}
-          <div className='absolute bg-[#f3eff2] w-full h-[130rem] md:h-[170rem] md:mt-[88rem] mt-[150rem] mb-[10rem]'>
+          <div className='absolute bg-[#f3eff2] w-full h-[310rem] md:h-[170rem] md:mt-[88rem] mt-[150rem] mb-[10rem]'>
             <h1 className='absolute text-5xl bold text-center font-calistoga mt-10 w-full'>Best in Class Restaurant</h1>
             <h1 className='absolute text-base text-gray-400 text-center w-full font-merriweather md:px-56 md:mt-28 mt-36 px-4'>Indulge in culinary excellence where every dish is crafted to perfection.
               Experience a dining journey that transcends expectations</h1>
               {/* Card section */}
-          <div className='absolute mt-30rem w-full h-[100rem] top-[10rem]'>
+          <div className='absolute md:top-[12rem] w-full h-[100rem] top-[16rem]'>
           <Cardslider />
           </div>
           </div>
           {/* The footer section */}
-          <div className='absolute mt-[246rem] h-[30rem] w-full top-10'>          
+          <div className='absolute md:top-[246rem] h-[30rem] w-full top-[454rem]'>          
           <Footer1 />  
           </div>
-          <div className='absolute mt-[276rem] w-full h-[20rem]'>
+          <div className='absolute md:top-[276rem] w-full md:h-[20rem] top-[481rem] bottom-0'>
             <Footer2 />
           </div>
           </div>

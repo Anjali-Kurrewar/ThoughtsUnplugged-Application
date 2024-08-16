@@ -29,8 +29,8 @@ const images = [
 
 function Cardslider() {
   return (
-   <div className='relative w-full flex md:top-[0rem]'>
-      <div className="absolute flex flex-col   items-center justify-evenly top-10 md:grid md:grid-cols-3 md:gap-y-[2rem] md:gap-x-8 w-full md:justify-evenly md:items-center">
+   <div className='relative w-full  md:top-[0rem]'>
+      <div className="absolute flex flex-col gap-y-[6rem]  items-center justify-evenly top-10 md:grid md:grid-cols-3 md:gap-y-[2rem] md:gap-x-8 w-full md:justify-evenly md:items-center">
         {images.map((image, index) => (
           <div key={index} className="group relative cursor-pointer  h-[18rem] w-[16rem] md:h-[30rem] md:w-[22rem] rounded-t-full md:m-10 hover:drop-shadow-2xl items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
             <div className="h-full w-full">
