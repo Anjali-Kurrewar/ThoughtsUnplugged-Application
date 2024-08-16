@@ -94,7 +94,7 @@ const ServicePage = () => {
             expertise to guide you through the plethora of options and find the products that enhance your cooking experience.
           </p>
           <div className='relative md:absolute top-[2rem] md:top-0 md:right-0 right-0 md:h-full w-full h-[20rem] md:w-[30rem] md:pr-[74.5rem]'>
-            <img src='./service4.jpg' alt='service4' className='absolute inset-0 object-cover rounded-b-3xl md:rounded-s-3xl w-full md:w-[26rem] h-full '/>
+            <img src='./service4.jpg' alt='service4' className='absolute inset-0 object-cover overflow-hidden md:rounded-s-3xl w-full md:w-[26rem] h-full '/>
           </div>
         </div>
             {/* Footer */}

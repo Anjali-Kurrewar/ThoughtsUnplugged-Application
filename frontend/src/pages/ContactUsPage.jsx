@@ -35,7 +35,12 @@ const ContactUsPage = () => {
 
       if (response.ok) {
         console.log('Message sent successfully');
-        // You can add success handling here
+        setFormData({
+          username: '',
+          email: '',
+          subject: '',
+          message: ''
+      });
       } else {
         console.log('Failed to send message');
         // You can add error handling here
@@ -85,7 +90,7 @@ const ContactUsPage = () => {
         <div className='absolute w-[10rem] h-[10rem] md:w-[18rem] md:h-[18rem]  bg-gradient-to-r from-main-color1 to-main-color2 rounded-2xl left-1/2 top-[32rem] md:left-[52rem] md:top-[28rem] '></div>
         <div className='absolute w-[2rem] h-[2rem] md:w-[4rem] md:h-[4rem]  bg-gradient-to-r from-main-color1 to-main-color2 rounded-md left-[2rem] top-[24rem] md:left-[22rem] md:top-[34rem] '></div>
         <div className='absolute w-[4rem] h-[4rem] md:w-[8rem] md:h-[8rem]  bg-gradient-to-r from-main-color1 to-main-color2   rounded-2xl left-3/4 top-[2rem] md:left-[60rem] md:top-[4rem] '></div>
-        <div className='absolute md:mx-[24rem] md:mt-[10rem] md:w-[40rem] md:h-[34rem] pl-[2.5rem]  mt-20 w-full h-[35rem] bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100'>
+        <div className='absolute md:mx-[24rem] md:mt-[10rem] md:w-[40rem] md:h-[34rem]  mt-20 w-full h-[35rem] bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100'>
         <form onSubmit={handleSubmit}>
           <div className='absolute '>
           <div >
@@ -128,11 +133,11 @@ const ContactUsPage = () => {
             name="message"
             value={formData.message}
             onChange={handleChange} 
-            rows="4" 
+            rows="4"
             className="block p-2.5 w-full md:w-[34rem]  ml-[3rem] text-md text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-black focus:border-black" 
             placeholder="Write your thoughts here..."></textarea>
           </div> 
-          <button type="button" className=" mt-4 ml-[3rem] text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-md px-5 py-2.5 me-2 mb-2">Send</button>
+          <button type="submit" className=" mt-4 ml-[3rem] text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-md px-5 py-2.5 me-2 mb-2">Send</button>
           </div>
           </form>
       </div>

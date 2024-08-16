@@ -29,7 +29,7 @@ const AboutUsPage = () => {
     } else if (size.width >= 768) {
       return 44; // Medium screens
     } else {
-      return 24; // Small screens
+      return 26; // Small screens
     }
   }; 
 
@@ -52,7 +52,9 @@ const AboutUsPage = () => {
         <ul
           className={`${
             toggle ? " flex" : " hidden"
-          } flex-col z-30 absolute md:absolute  md:ml-48 md:top-4 w-full first:mt-2 md:flex-row md:w-auto md:space-x-10 md:flex bg-white-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-50 border border-gray-100`}
+          } flex-col z-30 absolute md:absolute  md:ml-48 md:top-4 w-full first:mt-2 md:flex-row md:w-auto md:space-x-10 
+          md:flex bg-white-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-50 border
+           border-gray-100`}
         >
           {navbarData.map((link, index) => {
             return (
@@ -69,7 +71,7 @@ const AboutUsPage = () => {
           })}
         </ul>
         {/* Intro */}
-     <div className="absolute top-[34rem] md:top-48 left-8 md:left-16 right-8 md:right-[44rem] h-auto md:h-[30rem]">
+     <div className="absolute top-[36rem] md:top-48 left-8 md:left-16 right-8 md:right-[44rem] h-auto md:h-[30rem]">
         <h5 className="font-calistoga text-3xl mt-8 md:text-6xl md:leading-[6rem]">About Me</h5>
        <p className="text-gray-600 text-justify mt-4">
          I immerse myself in the world of culinary delights, offering insightful reviews and captivating content that inspire food enthusiasts. Through my journey, I share the art and stories behind each dish, connecting with a community that values flavor, creativity, and the joy of dining.
@@ -105,7 +107,7 @@ const AboutUsPage = () => {
           </div>
         </div>
         {/* Intro icons */}
-          <div className='absolute left-10 top-[80rem] w-[10rem]  md:w-[38rem] md:h-[12rem]  md:left-16 md:top-[52rem]'>
+          <div className='absolute left-10 top-[76rem] w-[10rem]  md:w-[38rem] md:h-[12rem]  md:left-16 md:top-[52rem]'>
           <div className='absolute left-0 inline-flex  '>
           <SiYoutube color="#be7c68" size={getIconSize()} />
           </div>
@@ -148,10 +150,10 @@ const AboutUsPage = () => {
             className="absolute p-12 top-20 md:top-40 md:left-1/2 md:w-5/12 md:h-[48rem] "
           />
           </div>
-          <div className=' w-full h-[30rem] mt-[100rem] md:mt-[70rem] absolute bg-black'>
+          <div className=' w-full h-[30rem] mt-[88rem] md:mt-[70rem] absolute'>
           <Footer1/>
           </div>
-          <div className='absolute h-[16rem] w-full mt-[150rem] md:mt-[100rem]'>
+          <div className='absolute h-[16rem] w-full mt-[115rem] md:mt-[100rem]'>
           <Footer2/>
           </div>
           </div>
